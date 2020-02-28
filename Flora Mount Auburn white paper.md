@@ -51,7 +51,7 @@ The development of _Flora__Mount Auburn_ has allowed the Cemetery to share it&#3
 
 __Acknowledgements__
 
-Mount Auburn Cemetery would like to thank Michael Lippman and the entire Blue Raster team for their hard work, patience and flexibility developing this application. Special thanks go to Mike O&#39;Neal of BG-BASE for going above-and-beyond to get the database connector working and to Rich Snow, Mount Auburn&#39;s Director of Information Technology for taking on a sys-admin problem he didn&#39;t expect. Finally, thank you to the IMLS for generously underwriting this work. Other gardens have already expressed interest in this software and we are happy to share our experience to improve the overall accessibility of botanical collections everywhere.
+Mount Auburn Cemetery would like to thank Michael Lippmann and the entire Blue Raster team for their hard work, patience and flexibility developing this application. Special thanks go to Mike O&#39;Neal of BG-BASE for going above-and-beyond to get the database connector working and to Rich Snow, Mount Auburn&#39;s Director of Information Technology for taking on a sys-admin problem he didn&#39;t expect. Finally, thank you to the IMLS for generously underwriting this work. Other gardens have already expressed interest in this software and we are happy to share our experience to improve the overall accessibility of botanical collections everywhere.
 
 __References__
 
