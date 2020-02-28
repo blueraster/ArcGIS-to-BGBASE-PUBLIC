@@ -2,17 +2,17 @@
 
 Stephen Jackson, Dennis Collins, Samantha Richardson
 
-Abstract
+__Abstract__
 
 Mount Auburn Cemetery was awarded an Institute for Museum and Library Services grant to develop a searchable web-based mapping application to share their plant collections information with the public. The project was initially funded in 2017 and completed in early 2020. The multi-phase project included a team of consultants including Blue Raster, LLC, BG-BASE&#39;s Mike O&#39;Neal, and Brian Morgan with the Alliance for Public Gardens GIS (APGG). The challenge involved moving plant records data from the botanical-gardens database BG-BASE to a SQL database loaded with the APGG data-model. The solution included a set of Python scripts that attach to REST endpoints that allow for data to be written in both directions between the databases. This communication allows a GIS to connect to the SQL database. Mount Auburn is using ESRI&#39;s software for this. Blue Raster, LLC also worked with Mount Auburn in an iterative design cycle to create the user interface look-and-feel and to develop the web application. The interactive plant map can be found at: [https://flora.mountauburn.org/](https://flora.mountauburn.org/)  .
 
-Introduction
+__Introduction__
 
 Mount Auburn Cemetery is an historic cemetery founded in 1831 in Cambridge, Massachusetts. The 270-acre cemetery was originally conceived as both a non-denominational cemetery and horticultural display garden by the Massachusetts Horticultural Society. The cemetery became the an instant success with the public, which had never been allowed access to experience horticulture as it was practiced on private estates. Mount Auburn is considered the first &quot;garden cemetery&quot; in the United States and served as an inspiration for the American public parks movement. In the 1990&#39;s a renewed focus was placed on horticulture at Mount Auburn, especially for landscape preservation and enhancement. A full-time curatorial position was created for managing the plant collections. Dedicated software for collections management was brought in at this time, with BG-BASE as a database for maintaining collection records and BG-MAP as a CAD-based mapping software package that works in tandem with it. Subsequently, an ESRI 9.x GISystem was also developed to help manage and map the burials at the cemetery. Mount Auburn was accredited as an Arbnet Level III arboretum, with its collection of more than 5,000 trees from around the world and its significant educational and public programming opportunities.
 
 In 2015 work began on replacing the outdated (and non-maintainable) ESRI 9.x GISystem with modern ESRI 10.x software resting on top of a Microsoft SQL Server database. The plant collections department saw the opportunity to upgrade its mapping capabilities at this time and proposed moving away from BG-MAP to GIS-based mapping in order to capitalize on a system that allowed for integration of all of Mount Auburn&#39;s spatial data layers, create a more-flexible mapping system, improve future maintainability and provide a detailed web-based plant locator map for the public. The work on updating this system was funded through several grants from the Institute of Museum and Library Services (IMLS) and has taken over three years to complete. The end result is now an ESRI/SQL-server based plant mapping system with an online portal for visitors and staff to use to explore Mount Auburn&#39;s botanical collections ([https://flora.mountauburn.org](https://flora.mountauburn.org)).
 
-Problem Statement
+__Problem__ __Statement__
 
 For more than two decades Mount Auburn used a combination of software to achieve its curatorial goals for the plant collections: BG-BASE as the collections database and BG-MAP as the mapping software. &quot;_BG-BASE_ is a database application designed to manage information on biological (primarily botanical) collections. It is used in a wide variety of botanic gardens, arboreta, herbaria, zoos, universities, and similar institutions needing to document their collections as well as to maintain other biological information&quot; (bg-base.com, 2020). The database is based on a noSQL framework that is developed by Revelation Software that has advantages for managing a plant collection: database fields can be multi-value, allowing for multiple updates to a single record (as opposed to a SQL database which would require a new record being created for every update). This allows for field checks, plant growth measurements, etc. to be kept in the database. However, the structure of the database poses a problem for integrating with the ESRI GIS ecosystem of software applications. ESRI&#39;s ArcMap software allows for limited connectability with noSQL databases. The challenge was how to transfer data from BG-BASE to a SQL-compliant database that ESRI software can read from.
 
@@ -24,14 +24,14 @@ The business needs of the cemetery also drove the requirement to produce a GIS l
 
 Finally, Mount Auburn did not have a working digital map of the plants on the grounds that was available for public use. There was a stand-alone kiosk (and during this process, a web-based phone app) for viewing graves but nothing containing the living collections. Along with improving the ability for the curatorial staff to map plants, a major factor for working on this project was to provide a public-facing web application that would allow visitors to explore the arboretum. The goal was to implement a responsive app that would work on mobile devices as well as home computers.
 
-Solution
+__Solution__
 
 The solution for using ESRI GIS-based mapping at Mount Auburn required several steps and a significant investment in equipment, software, staff and consultant time. The objective was to continue using BG-BASE as the collections database, provide GIS layers for plant collections and create a publicly available web-based application. The project was broken into several steps:
 
-1. 1)Secure funding to help pay for consultants/developers.
-2. 2)Hire consultants with prior GIS and Public Garden mapping expertise.
-3. 3)Develop and implement a process to write from BG-BASE to a SQL-compliant database for the GIS.
-4. 4)Develop a web-based, responsive application that allows for searching the plant collections.
+ 1)Secure funding to help pay for consultants/developers.
+ 2)Hire consultants with prior GIS and Public Garden mapping expertise.
+ 3)Develop and implement a process to write from BG-BASE to a SQL-compliant database for the GIS.
+ 4)Develop a web-based, responsive application that allows for searching the plant collections.
 
 The first item was to secure the funding for the project. Mount Auburn had already done significant background work preparing for this project, including a prior IMLS grant (MA-31-16-0028) to map a discrete 5-acre garden area within the arboretum using a GPS system. This was done as a proof-of-concept for moving forward with the work and included hiring the Executive Director of the Alliance for Public Gardens GIS, Brian Morgan. The relationship with Mr. Morgan continued forward into this project. A second IMLS grant was awarded in 2017 to fund the development of the web-based plant map application (MA-30-17-0309).
 
@@ -45,15 +45,15 @@ Since significant time had also passed during these tasks, it was again necessar
 
 In early 2020, the plant collections app (named Flora Mount Auburn) was finally running and accessible by the public at: https:/flora.mountauburn.org. The app allows visitors to learn more about Mount Auburn, explore three predetermined tours (_Eternally Green_, the _African American Heritage Trail_ and _Botanists, Horticulturists and Garden Enthusiasts at Mount Auburn_). It allows users to search for plants using a variety of criteria (common name, scientific name, accession number, family, location, and plant habit). The map also provides cemetery features such as lot outlines, lot numbers and headstones to help in wayfinding while on the ground. There is an additional feature to export a comma separated file of the plants that the user is searching. Clicking on individual plants brings up a dialog box that includes plant record information and photograph of the plant (if available). Next steps for Flora Mount Auburn include developing maintenance procedures and protocols, integrating the map with Mount Auburn&#39;s main website, enhancing the tour options, and uploading more plant photographs.
 
-Conclusion
+__Conclusion__
 
 The development of _Flora__Mount Auburn_ has allowed the Cemetery to share it&#39;s botanical collections of more than 18,000 plants with the world. Developing a web-based searchable map proved to be a significant challenge. Horticultural mapping is a fairly narrow specialty to begin with and finding the right people to create a team to develop the product was the first challenge. The staff at Blue Raster, LLC truly stepped up on this project and have worked with us well beyond the original project scope. Brian Morgan of the Alliance for Public Garden GIS and Mike O&#39;Neal of BG-BASE also spent significantly more time than expected helping to get the app working. The challenge of having BG-BASE share data with a SQL database such as MSSQL was met, and Blue Raster&#39;s connector Python code is freely available for other public gardens to utilize. Expertise was grown in-house (with Blue Raster&#39;s help) for architecting and installing ArcEnterprise in an Azure cloud setting. Three years after the IMLS grant was received, the web app is running. Future work can be centered around tuning and enhancing the app, as well as increasing the data fields that are available through the bg-base/SQL connector software. Most importantly, Mount Auburn Cemetery, through the IMLS grant award, has led a project that can be reused by other public gardens allowing for greater access to their living collections.
 
-Acknowledgements
+__Acknowledgements__
 
 Mount Auburn Cemetery would like to thank Michael Lippman and the entire Blue Raster team for their hard work, patience and flexibility developing this application. Special thanks go to Mike O&#39;Neal of BG-BASE for going above-and-beyond to get the database connector working and to Rich Snow, Mount Auburn&#39;s Director of Information Technology for taking on a sys-admin problem he didn&#39;t expect. Finally, thank you to the IMLS for generously underwriting this work. Other gardens have already expressed interest in this software and we are happy to share our experience to improve the overall accessibility of botanical collections everywhere.
 
-References
+__References__
 
 &quot;Alliance for Public Gardens GIS.&quot; Alliance for Public Gardens GIS. Accessed February 27, 2020. https://publicgardensgis.ucdavis.edu/.
 
