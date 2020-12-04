@@ -155,9 +155,9 @@ field_map = {
 
 # Geometry attributes are returned in Arc query as 'x', 'y', and 'z'. 
 # 'x', 'y', and 'z' in this dictionary correspond to the key in the 
-# {x:lat, y:lon, z:elev} dictionary pairs returned by an Arc query.
-geom = {'x': 'x/latitude',
-        'y': 'y/longitude',
+# {x:lon, y:lat, z:elev} dictionary pairs returned by an Arc query.
+geom = {'x': 'x/longitude',
+        'y': 'y/latitude',
         'z': 'z/elevation'}
 
 """ContainerType and MediumType are not used at Mount Auburn
