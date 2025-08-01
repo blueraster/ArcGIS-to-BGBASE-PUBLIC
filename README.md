@@ -1,3 +1,10 @@
+# 📁 Archived Repository
+This repository is no longer maintained and has been archived.
+For the latest updates, ongoing development, and related projects, please visit:
+🔗 [https://www.blueraster.com/what-we-do/modernize-public-gardens/](https://www.blueraster.com/what-we-do/modernize-public-gardens/)
+
+---
+
 # ArcGIS BG-BASE Sync
 
 This GitHub repo contains the Python scripts that synchronize living plant collections records in an ArcGIS Enterprise Geodatabase based on the ArcGIS Parks and Gardens Information Model with a BG-BASE living plant collections database.
